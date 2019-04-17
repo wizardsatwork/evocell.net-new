@@ -1,0 +1,61 @@
+@import 'mixins'
+@import 'variables'
+
+/*
+ *   GENERAL
+ */
+
+
+html, body
+  margin: 0
+  padding: 0
+
+
+.center
+  @include flex(column, center, center)
+  width: 100vw
+  min-height: 100vh
+
+.row
+  .hexagon
+    max-height: 320px
+    min-height: 320px
+
+/*
+ *   BREAKPOINTS
+ */
+
+@media screen and (max-width: $breakpoint-mobile)
+  body
+    padding-top: 40px
+
+  .row
+    @include flex(column, center, center)
+    margin: 20px 40px
+
+    .hexagon
+      min-height: 320px
+      max-height: 380px
+
+    .hexagon.left
+      margin-bottom: 50px
+      margin-right: 0
+
+
+@media screen and (min-width: $breakpoint-desktop)
+  .row
+    @include flex(row, center, center)
+
+    .hexagon.left
+      margin-right: 140px
+
+    .hexagon.right
+      margin-left: 140px
+
+    &.middle
+      margin-top: -140px
+      margin-bottom: -140px
+
+
+  
+
