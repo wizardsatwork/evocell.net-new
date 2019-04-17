@@ -57,7 +57,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("img/hexagon.svg");
+  background: url("https://spacefruit.github.io/evocell.net/img/hexagon.svg");
   background-size: cover;
   background-position: center;
   overflow: visible;
