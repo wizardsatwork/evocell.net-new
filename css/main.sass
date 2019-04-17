@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,600')
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono')
+
 @import 'mixins'
 @import 'variables'
 
@@ -7,8 +10,36 @@
 
 
 html, body
+  font-family: 'Poppins'
+  font-size: 16px
   margin: 0
   padding: 0
+
+p
+  max-width: 80%
+  font-size: 18px
+  text-align: center
+
+time, code
+  font-family: 'Roboto Mono'
+  font-size: 20px
+  color: #222
+
+code
+  @include flex(column, center, flex-start)
+  max-width: 70%
+  font-size: 19px
+
+
+h1, h2, h3, h4
+  font-weight: 600
+  color: #000
+
+h1
+  font-size: 24px
+
+.logo
+  margin-top: -20px
 
 
 .center
@@ -18,8 +49,12 @@ html, body
 
 .row
   .hexagon
-    max-height: 320px
-    min-height: 320px
+    @include flex(column, center, center)
+    //width: 370px
+    background: url('/img/hexagon.svg')
+    background-size: cover
+    background-position: center
+    overflow: visible
 
 /*
  *   BREAKPOINTS
@@ -34,8 +69,8 @@ html, body
     margin: 20px 40px
 
     .hexagon
-      min-height: 320px
-      max-height: 380px
+      height: 370px
+      width: 320px
 
     .hexagon.left
       margin-bottom: 50px
@@ -46,15 +81,18 @@ html, body
   .row
     @include flex(row, center, center)
 
+    .hexagon
+      width: 320px
+      height: 370px
+
     .hexagon.left
-      margin-right: 140px
+      margin-right: 30px
 
     .hexagon.right
-      margin-left: 140px
+      margin-left: 30px
 
     &.middle
-      margin-top: -140px
-      margin-bottom: -140px
+      margin-top: -50px
 
 
   
